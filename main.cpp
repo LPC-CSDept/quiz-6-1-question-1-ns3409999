@@ -1,18 +1,30 @@
-#include "q1.hpp"
+#include<iostream>
+using namespace std;
 
+void swap(int ,int );
+/*Swapping of Two Numbers in C++ Using Functions Call by Value*/
 int main()
 {
-	int num1, num2;
-	float fnum1, fnum2;
-	getinput(num1, num2);
-	cout << num1 << " " << num2 << endl;
-	swapTwoValues(num1, num2);
-	cout << num1 << " " << num2 << endl;
-
-	// -- Call overloaded function with float parameters
-	getinput(fnum1, fnum2);
-	cout << fixed << setprecision(2);
-	cout << num1 << " " << num2 << endl;
-	swapTwoValues(fnum1, fnum2);
-	cout << num1 << " " << num2 << endl;
+   //Program by- Ghanendra Yadav
+    int a,b;
+    cout<<"Enter the Two Numbers to Swap in C++: ";
+    cin>>a>>b;
+    cout<<"\nAfter Swapping of Two Numbers:";
+    swap(a,b);
+    
+    return 0;
+}
+void swap(int x,int y)
+{
+ int z;
+/*Extra veriable for storing the value of first or second variable*/ 
+ 
+ z=x;
+/*Copying the first variable value to the tempriory variable*/
+ x=y;
+/*Copying the second variable value to the first variable*/
+ y=z;
+/*Copying the tempriory variable value to the second variable*/ 
+ cout<<" "<<x<<"   "<<y;
+ 
 }
